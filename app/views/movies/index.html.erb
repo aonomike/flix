@@ -1,0 +1,14 @@
+<ul>
+<% @movies.each do |movie| %>
+  <li>
+    <stong><%= movie.title %></stong>( <%= movie.rating %> ):
+     <%= flop(movie) %>
+     <p>
+       <%= truncate(movie.description, length: 40, seperator: ' ') %>
+     </p>
+     <p>
+     realeased <%= release_date(movie) %>
+     </p>
+  </li>
+<% end %>
+</ul>
