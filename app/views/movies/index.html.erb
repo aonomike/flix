@@ -1,8 +1,8 @@
 <ul>
 <% @movies.each do |movie| %>
   <li>
-    <stong><%= movie.title %></stong>( <%= movie.rating %> ):
-     <%= flop(movie) %>
+    <stong><%= link_to movie.title, movie_path(movie) %></stong>( <%= movie.rating %> ):
+     <%= total_gross(movie) %>
      <p>
        <%= truncate(movie.description, length: 40, seperator: ' ') %>
      </p>

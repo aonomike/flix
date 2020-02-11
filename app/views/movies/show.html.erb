@@ -1,0 +1,5 @@
+<p> Title: <%= @movie.title %> </p>
+<p> description : <%= truncate(@movie.description, length: 40, separator: ' ') %> </p>
+<p> Created on: <%= @movie.released_on %> </p>
+<p> Total gross: <%= total_gross(@movie) %>
+<p><%= link_to 'Edit', edit_movie_path(@movie) %></p>
